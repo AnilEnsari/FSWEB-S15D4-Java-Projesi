@@ -1,5 +1,7 @@
 import java.util.*;
 
+import static java.lang.String.valueOf;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -16,7 +18,9 @@ public class Main {
         System.out.println("Racecar  is " + checkForPalindrome2("Racecar"));
         System.out.println("Don't node is " + checkForPalindrome2("Don't node"));
         System.out.println("hello  is " + checkForPalindrome2("hello "));
-
+toBinary(5);
+        toBinary(25);
+        toBinary(553);
     }
 
     public static boolean checkForPalindrome(String text) {
@@ -58,5 +62,21 @@ public class Main {
         }
 
         return true;
+    }
+    public static void toBinary (int number){
+        LinkedList <Integer>binary = new LinkedList<> ();
+while (number>0){
+
+   binary.addFirst( number%2);
+   number = ((int)Math.floor(number/2));
+
+}
+String result = "";
+        for(int binar :binary){
+          result+=  String.valueOf(binar);
+
+        }
+        System.out.println("Binary number is : "+result);
+
     }
 }
